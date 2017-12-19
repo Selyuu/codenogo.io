@@ -4,9 +4,9 @@ import './App.css';
 
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import Octacat from 'react-icons/lib/io/social-octocat';
-import { PrismCode } from 'react-prism';
+// import { PrismCode } from 'react-prism';
 require('prismjs');
-require('prismjs/themes/prism.css');
+// require('prismjs/themes/prism.css');
 
 const naviBar = (
   <Navbar inverse={false}>
@@ -19,7 +19,7 @@ const naviBar = (
         </Navbar.Brand>
       </Navbar.Header>
       </div>
-      <div className="nav-links">
+      <div className="nav-links hidden-s">
       <Nav pullRight>
         <NavItem href="#">About</NavItem>
         <NavItem href="#">Contribute</NavItem>
@@ -45,10 +45,43 @@ const cards = (
 
 
     <div className="cards">
+      <h3>Minimal value is greater than zero, wat?</h3>
+      <p>Last updated Dec 19, 2017</p>
+      <div>
+      <pre className="language-javascript"><code className="language-javascript">Number.MIN_VALUE > 0 // -> true</code></pre>
+      </div>
+    </div>
+
+
+    <div className="cards">
+      <h3>null is falsy, but not false</h3>
+      <p>Last updated Dec 19, 2017</p>
+      <div>
+      <pre className="language-javascript">
+      <code className="language-javascript">!!null // -> false</code><br/>
+      <code className="language-javascript">null == false // -> false</code>
+      </pre>
+      </div>
+    </div>
+
+    <div className="cards">
+      <h3>Adding arrays, wat?</h3>
+      <p>Last updated Dec 19, 2017</p>
+      <div>
+      <pre className="language-javascript"><code className="language-javascript">[1, 2, 3] + [4, 5, 6]  // -> '1,2,34,5,6'
+</code></pre>
+      </div>
+    </div>
+
+    <div className="cards">
       <h3>Minimal value is greater than zero</h3>
       <p>Last updated Dec 19, 2017</p>
       <div>
-      <PrismCode component="pre" className="language-javascript">Number.MIN_VALUE > 0 // -> true</PrismCode>
+      <pre className="language-javascript">
+      <code className="language-javascript">let arr = [,,,]</code><br/>
+      <code className="language-javascript">arr.length // -> 3</code><br/>
+      <code className="language-javascript">a.toString() // => ',,'</code>
+      </pre>
       </div>
     </div>
 
@@ -56,8 +89,9 @@ const cards = (
 )
 
 const footer = (
-  <div className="footer">
-
+  <div className="container footer">
+    <hr className="footer-line" />
+    <p>2017 / Built by: Rainier Louis</p>
   </div>
 )
 
