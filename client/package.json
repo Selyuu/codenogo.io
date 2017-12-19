@@ -5,6 +5,7 @@
   "dependencies": {
     "flat-color-icons": "^1.1.0",
     "react-bootstrap": "^0.31.5",
+    "react-fontawesome": "^1.6.1",
     "react-icons": "^2.2.7"
   },
   "scripts": {

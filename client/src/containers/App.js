@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 
-import { Button, Navbar, Nav, NavItem, Col } from 'react-bootstrap';
+import { Button, Navbar, Nav, NavItem } from 'react-bootstrap';
 import Octacat from 'react-icons/lib/io/social-octocat';
-
-
-// const buttonsInstance = (
-//     <Button bsStyle="primary">Primary</Button>
-// );
 
 const naviBar = (
   <Navbar inverse={false}>
@@ -34,9 +29,10 @@ const naviBar = (
 const mainSearch = (
   <div className="container search-div">
   <h1>JavaScript code no go</h1>
-  <h3>Discover the quirky side of the JavaScript language</h3>
-  <div className="input-group input-group-lg">
-    <input type="text" className="form-control" placeholder="" />
+  <h4>Discover the quirky side of the JavaScript language</h4>
+  <div className="input-group input-group-lg search-bar-div">
+    <input type="text" className="form-control search-bar-1" placeholder="&#xf002;" disabled />
+    <input type="text" className="form-control search-bar-2" placeholder="JavaScript, wat?" />
   </div>
   </div>
 )
