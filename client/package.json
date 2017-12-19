@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react-bootstrap": "^0.31.5"
+    "flat-color-icons": "^1.1.0",
+    "react-bootstrap": "^0.31.5",
+    "react-icons": "^2.2.7"
   },
   "scripts": {
     "start": "react-scripts start",
