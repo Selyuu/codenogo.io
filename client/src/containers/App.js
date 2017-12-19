@@ -51,7 +51,7 @@ const cards = (
     </div>
 
     <div className="cards">
-      <h3>null is falsy, but not false</h3>
+      <h3>null is falsy, but not false, wat?</h3>
       <p>Last updated Dec 19, 2017</p>
       <div>
       <pre className="language-javascript">
@@ -71,7 +71,7 @@ const cards = (
     </div>
 
     <div className="cards">
-      <h3>Minimal value is greater than zero</h3>
+      <h3>Trailing commas in array, wat?</h3>
       <p>Last updated Dec 19, 2017</p>
       <div>
       <pre className="language-javascript">
@@ -88,11 +88,27 @@ const cards = (
 const footer = (
   <div className="container footer">
     <hr className="footer-line" />
-    <p>2017 / Built by: Rainier Louis</p>
+    <p>2017 / Rainier Louis / <a href="https://github.com/selyuu">Github</a></p>
   </div>
 )
 
+const url = `http://localhost:3000/`;
+
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.fetchCards();
+  }
+
+
+  fetchCards = () => {
+    fetch(url)
+    .then(response => response.json())
+    .then(cards => {
+      this.props.addCards(cards);
+    });
+  }
 
   // ==================== RENDER
 
@@ -111,11 +127,14 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-
+  cards: state.cards
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
+  addCards: (cards) => dispatch({
+    type: 'ADD_CARDS',
+    cards
+  })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
