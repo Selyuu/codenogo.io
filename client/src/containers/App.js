@@ -4,9 +4,8 @@ import './App.css';
 
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import Octacat from 'react-icons/lib/io/social-octocat';
-// import { PrismCode } from 'react-prism';
 require('prismjs');
-// require('prismjs/themes/prism.css');
+
 
 const naviBar = (
   <Navbar inverse={false}>
@@ -43,7 +42,6 @@ const mainSearch = (
 const cards = (
   <div className="container code-snips">
 
-
     <div className="cards">
       <h3>Minimal value is greater than zero, wat?</h3>
       <p>Last updated Dec 19, 2017</p>
@@ -51,7 +49,6 @@ const cards = (
       <pre className="language-javascript"><code className="language-javascript">Number.MIN_VALUE > 0 // -> true</code></pre>
       </div>
     </div>
-
 
     <div className="cards">
       <h3>null is falsy, but not false</h3>
@@ -95,14 +92,7 @@ const footer = (
   </div>
 )
 
-
-
 class App extends Component {
-
-  // constructor(props) {
-  //   super(props);
-  // }
-
 
   // ==================== RENDER
 
@@ -125,10 +115,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  // addEvents: (events) => dispatch({
-  //   type: 'ADD_EVENTS',
-  //   events,
-  // }),
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
