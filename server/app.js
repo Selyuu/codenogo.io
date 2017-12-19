@@ -1,10 +1,8 @@
-const Koa = require('koa');
-const cors = require('koa2-cors');
-const bodyParser = require('koa-bodyparser');
-
-const app = new Koa();
-
-const router = require('./router');
+const Koa = require('koa'),
+      cors = require('koa2-cors'),
+      bodyParser = require('koa-bodyparser'),
+      app = new Koa(),
+      router = require('./router');
 
 app
   .use(bodyParser())
@@ -14,6 +12,7 @@ app
 
 
 app.listen(3000);
+
 console.log('-----------------');
 console.log('listening on 3000');
 console.log('-----------------');
