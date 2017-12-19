@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 
-import { Button, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import Octacat from 'react-icons/lib/io/social-octocat';
+import { PrismCode } from 'react-prism';
+require('prismjs');
+require('prismjs/themes/prism.css');
 
 const naviBar = (
   <Navbar inverse={false}>
-    <div>
+    <div className="navigation-bar">
       <div>
       <Navbar.Header>
         <Navbar.Brand>
@@ -37,6 +40,26 @@ const mainSearch = (
   </div>
 )
 
+const cards = (
+  <div className="container code-snips">
+
+
+    <div className="cards">
+      <h3>Minimal value is greater than zero</h3>
+      <p>Last updated Dec 19, 2017</p>
+      <div>
+      <PrismCode component="pre" className="language-javascript">Number.MIN_VALUE > 0 // -> true</PrismCode>
+      </div>
+    </div>
+
+  </div>
+)
+
+const footer = (
+  <div className="footer">
+
+  </div>
+)
 
 
 
@@ -49,18 +72,14 @@ class App extends Component {
 
   // ==================== RENDER
 
-  renderButton() {
-    return (
-       <Button bsStyle="primary">Primary</Button>
-    )
-  }
-
   render() {
     return (
       <div>
         {naviBar}
         <div className="main-body">
           {mainSearch}
+          {cards}
+          {footer}
         </div>
       </div>
     );

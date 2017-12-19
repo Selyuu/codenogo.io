@@ -1,5 +1,5 @@
 html body {
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   font-family: -apple-system, 
               BlinkMacSystemFont, 
               "Segoe UI", 
@@ -9,6 +9,14 @@ html body {
               Cantarell, 
               "Helvetica Neue", 
               sans-serif;
+}
+
+.navbar-default {
+  display: flex;
+  align-items: center;
+  color: white;
+  box-shadow: none;
+  height: 70px;
 }
 
 .container {
@@ -30,7 +38,7 @@ html body {
 
 .nav-links {
   font-weight: 100;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .search-div {
@@ -45,6 +53,7 @@ html body {
   font-weight: 700;
   font-size: 42px;
   color: #444444;
+  margin-bottom: 20px;
 }
 
 .search-div h4 {
@@ -60,9 +69,9 @@ html body {
 }
 
 .search-bar-div input:first-of-type {
-  width: 50px;
+  width: 54px;
   height: 60px;
-  background-color: #f2f2f2;
+  background-color: #ededed;
   color: #fafafa;
   border: 0px;
   box-shadow: none;
@@ -72,13 +81,32 @@ html body {
   text-decoration: inherit;
 }
 
+.search-bar-div input:first-of-type::placeholder {
+  padding-left: 5px;
+}
+
 .search-bar-div input:nth-child(2) {
   height: 60px;
 }
 
 .search-bar-2 {
-  background-color: #f2f2f2;
-  color: #fafafa;
+  background-color: #ededed;
   border: 0px;
   box-shadow: none;
+}
+
+.search-bar-div input:nth-child(2)::placeholder {
+  color: #d3d3d3;
+  font-weight: 200;
+}
+
+.code-snips {
+  margin-top: 200px;
+}
+.cards {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
 }
