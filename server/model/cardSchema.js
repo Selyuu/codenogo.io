@@ -11,13 +11,20 @@ const cardSchema = new Schema({
 
 const Card = mongoose.model('card', cardSchema);
 
-Card.createItem = async (data) => {
-  const item = new Card({
-    title: data.title,
-    date: data.date,
-    code: data.score
+Card.getCards = () => {
+  return Card.find({}, (err, data) => {
+    return data;
   })
-  await item.save();
+}
+
+Card.newCard = async (body) => {
+  const card = new Card({
+    title: body.title,
+    date: body.date,
+    code: body.code
+  })
+  await card.save();
+  return card;
 }
 
 module.exports = Card;

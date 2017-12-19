@@ -1,8 +1,20 @@
 const Card = require('../model/cardSchema');
 
-exports.getList = async (ctx) => {
-  let results = Card.find({}, err => {
-    if (err) throw err;
-  })
-  ctx.body = await results;
+const getCards = async (ctx) => {
+  try {
+    const cards = await Card.getCards();
+    ctx.send(cards);
+  } catch (e) { }
+}
+
+const newCard = async (ctx) => {
+  try {
+    ctx.body = await Card.newCard(ctx.body);
+    await ctx.send(ctx.body);
+  } catch (e) { }
+}
+
+module.exports = {
+  getCards,
+  newCard
 }
