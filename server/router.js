@@ -4,7 +4,7 @@ const Router = require('koa-router'),
 const CardDataController = require('./controller/card.controller');
 
 router
-  .get('/', CardDataController.getCards),
+  .get('/', CardDataController.getCards)
   .post('/new', CardDataController.newCard);
 
   module.exports = router;

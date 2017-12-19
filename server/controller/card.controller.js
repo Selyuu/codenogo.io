@@ -9,8 +9,8 @@ const getCards = async (ctx) => {
 
 const newCard = async (ctx) => {
   try {
-    ctx.body = await Card.newCard(ctx.body);
-    await ctx.send(ctx.body);
+    ctx.response.body = await Card.newCard(ctx.request.body);
+    await ctx.send(ctx.response.body);
   } catch (e) { }
 }
 

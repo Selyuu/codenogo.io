@@ -18,6 +18,7 @@ Card.getCards = () => {
 }
 
 Card.newCard = async (body) => {
+  console.log(body);
   const card = new Card({
     title: body.title,
     date: body.date,
