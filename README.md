@@ -6,12 +6,15 @@ This is a list of strange and quirky things associated with the Javascript langu
 ## Installation
 
 Install dependencies:
+
 `$ npm i`
 
 Change into client/ directory:
+
 `$ cd client/`
 
 Start the server:
+
 `$ npm start`
 
 
