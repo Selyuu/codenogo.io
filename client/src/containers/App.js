@@ -4,8 +4,9 @@ import './App.css';
 
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import Octacat from 'react-icons/lib/io/social-octocat';
-require('prismjs');
 
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { ocean } from 'react-syntax-highlighter/styles/hljs';
 
 const naviBar = (
   <Navbar inverse={false}>
@@ -74,10 +75,12 @@ const cards = (
       <h3>Trailing commas in array, wat?</h3>
       <p>Last updated Dec 19, 2017</p>
       <div>
-      <pre className="language-javascript">
-      <code className="language-javascript">let arr = [,,,]</code><br/>
-      <code className="language-javascript">arr.length // -> 3</code><br/>
-      <code className="language-javascript">a.toString() // => ',,'</code>
+      <pre>
+      {`
+      let arr = [,,,]
+      arr.length // -> 3
+      a.toString() // => ',,'
+      `}
       </pre>
       </div>
     </div>
@@ -112,13 +115,33 @@ class App extends Component {
 
   // ==================== RENDER
 
+  renderCards() {
+    return this.props.cards.map((el, i) => {
+      let code = el.code.join('\n');
+      return (
+      <div className="cards">
+        <h3>{el.title}, wat?</h3>
+        <p>Last updated {el.date}</p>
+        <div>
+        <SyntaxHighlighter language="javascript" style={ocean}>
+        {code}
+        </SyntaxHighlighter>
+        </div>
+      </div>
+      )
+    });
+
+  }
+
   render() {
     return (
       <div>
         {naviBar}
         <div className="main-body">
           {mainSearch}
-          {cards}
+          <div className="container code-snips">
+          {this.renderCards()}
+          </div>
           {footer}
         </div>
       </div>
