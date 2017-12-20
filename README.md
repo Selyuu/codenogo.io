@@ -17,6 +17,10 @@ Start the server:
 
 `$ npm start`
 
+## API
+
+Created an API with Heroku Deployment to retrieve data for this app - API github can be found here [Selyuu/funky-API](https://github.com/selyuu/funky-API "Github/funky-API")
+
 ## Examples
 
 ![alt text](https://i.imgur.com/8AR6pli.png "screenshot")
