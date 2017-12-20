@@ -19,7 +19,8 @@ Start the server:
 
 ## API
 
-Created an API with Heroku Deployment to retrieve data for this app - `GET` to `https://funky-js.herokuapp.com/api/code`. 
+Created an API with Heroku Deployment to retrieve data for this app. 
+To use, send a `GET` request to `https://funky-js.herokuapp.com/api/code`. 
 
 API github can be found here [Selyuu/funky-API](https://github.com/selyuu/funky-API "Github/funky-API")
 
