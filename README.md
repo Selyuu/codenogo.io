@@ -9,7 +9,7 @@ Install dependencies:
 
 `$ npm i`
 
-Change into client/ directory:
+Change into client/directory:
 
 `$ cd client/`
 
@@ -17,6 +17,11 @@ Start the server:
 
 `$ npm start`
 
+## Examples
+
+![alt text](https://i.imgur.com/8AR6pli.png "screenshot")
+
+![alt text](https://i.imgur.com/RpEvNh5.png "screenshot")
 
 ## Front Stack
 - React
